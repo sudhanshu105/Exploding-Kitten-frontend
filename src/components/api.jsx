@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const updateScore = async (username, score)  => {
     try {
-        await axios.post('https://exploding-kitten-zwxd.onrender.com/leaderboard', {
+        await axios.post('https://exploding-kitten-backend-oma1.onrender.com/leaderboard', {
             username: username,
             score: score,
         });

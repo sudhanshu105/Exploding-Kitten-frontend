@@ -6,7 +6,7 @@ function Leaderboard() {
   // Function to fetch initial leaderboard
   const fetchInitialLeaderboard = async () => {
     try {
-      const response = await fetch('https://exploding-kitten-zwxd.onrender.com/leaderboard'); 
+      const response = await fetch('https://exploding-kitten-backend-oma1.onrender.com/leaderboard'); 
       const data = await response.json();
       setLeaderboard(data.slice(0, 10)); // Limit to top 10 entries
     } catch (error) {
@@ -19,7 +19,7 @@ function Leaderboard() {
 
     // Function to create a WebSocket connection and set up event listeners
     const connectWebSocket = () => {
-      ws = new WebSocket('wss://exploding-kitten-zwxd.onrender.com/ws');
+      ws = new WebSocket('wss://exploding-kitten-backend-oma1.onrender.com/ws');
 
       ws.onopen = () => {
         console.log("WebSocket connection established");
